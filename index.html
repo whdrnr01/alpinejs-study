@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alpinejs 인덱스 페이지 번역</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+</head>
+<body class="p-10">
+    <h1 class="text-3xl font-bold">Alpine.js</h1>
+
+    <p class="text-sm text-gray-900"><a href="https://alpinejs.dev" target="_blank">alpinejs.dev</a>인덱스 페이지 번역</p>
+    <h2 class="text-xl text-gray-900 mt-10 font-bold">토글 버튼 예시</h2>
+    <div x-data="{ open: false }" class="p-4 bg-gray-100 rounded-lg">
+        <button @click="open = !open" class="px-4 py-2 bg-blue-500 text-white rounded-lg">더보기</button>
+        <p x-show="open" class="mt-2 text-gray-900">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci dolore doloribus earum fugiat id maxime nobis temporibus? Ab autem earum esse eveniet explicabo fugit in ipsam iusto obcaecati quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dolorem exercitationem fugiat in, ipsa molestias natus odit quibusdam tenetur. Accusamus dolores error eum illum impedit provident rem rerum totam voluptates?
+        </p>
+    </div>
+
+    <h2 class="text-xl text-gray-900 mt-10 font-bold">Alpinejs 특징</h2>
+    <div>
+        <h1 class="text-3xl font-bold">간다하다</h1>
+        <h1 class="text-3xl font-bold">가볍다</h1>
+        <h1 class="text-3xl font-bold">강력하다</h1>
+        <p class="text-lg">Alpine은 마크업에 직접 작성할 수 있는 도구입니다. 최신 웹용 jQuery라고 생각하면 됩니다. 스크립트 태그를 넣고 시작하세요.</p>
+        <p class="text-lg">Alpine.js는 <strong>15개의 속성</strong>, <strong>6개의 프로퍼티</strong> 그리고 <strong>2개의 메서드</strong>로 구성된 컬렉션입니다.</p>
+        <p class="text-lg">직접 눈으로 확인해 가면서 배우는 것이 가장 좋은 방법입니다. </p>
+    </div>
+
+    <div class="relative mt-4">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center">
+            <span class="bg-white px-2 text-sm text-gray-500">15개의 속성</span>
+        </div>
+    </div>
+
+    <div class="overflow-hidden rounded-md bg-white shadow">
+        <ul role="list" class="divide-y divide-gray-200">
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-data</h3>
+                <p class="text-gray-800">HTML 블록에 새 Alpine 컴포넌트와 데이터를 선언한다. x-로 시작한다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-bind</h3>
+                <p class="text-gray-800">요소에 HTML 속성을 동적으로 설정하기. div 에 클래스 속성을 추가하거나 제거할 수 있다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-on</h3>
+                <p class="text-gray-800">엘리먼트에 브라우저 이벤트 수신</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-text</h3>
+                <p class="text-gray-800">엘리먼트에 텍스트 콘텐츠 설정</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-html</h3>
+                <p class="text-gray-800">엘리먼트에 내부 HTML 설정</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-model</h3>
+                <p class="text-gray-800">input 요소와 데이터를 동기화하기</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-show</h3>
+                <p class="text-gray-800">엘리먼트의 표시 여부를 토글하기 (on/off)</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-transition</h3>
+                <p class="text-gray-800">CSS 전환을 사용하여 엘리먼트 안팎으로 전환하기</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-for</h3>
+                <p class="text-gray-800">데이터 집합을 기반으로 HTML 블록을 반복한다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-if</h3>
+                <p class="text-gray-800">페이지에서 HTML 블록을 조건부로 추가/제거한다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-init</h3>
+                <p class="text-gray-800">알파인에 의해 엘리먼트가 초기화될 때 코드 실행</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-effect</h3>
+                <p class="text-gray-800">종속성 중 하나가 변경될 때마다 스크립트가 실행된다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-ref</h3>
+                <p class="text-gray-800">$ref 매직 속성을 사용해서 지정된 키로 요소를 직접 참조한다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-cloak</h3>
+                <p class="text-gray-800">알파인이 콘텐츠 초기화를 완료할 때까지 HTML 블록을 숨긴다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">x-ignore</h3>
+                <p class="text-gray-800">알파인이 HTML 블록을 초기화하지 못하도록 방지합니다.</p>
+            </li>
+            <!-- More items... -->
+        </ul>
+    </div>
+
+    <div class="relative mt-4">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center">
+            <span class="bg-white px-2 text-sm text-gray-500">6개의 프로퍼티</span>
+        </div>
+    </div>
+
+    <div class="overflow-hidden rounded-md bg-white shadow">
+        <ul role="list" class="divide-y divide-gray-200">
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$store</h3>
+                <p class="text-gray-800">Alpine.store(...) 을 이용해서 등록된 글로벌 스토어에 액세스합니다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$el</h3>
+                <p class="text-gray-800">현재 DOM 요소 참조</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$dispatch</h3>
+                <p class="text-gray-800">현재 요소에서 사용자 지정 브라우저 이벤트 디스패치하기</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$watch</h3>
+                <p class="text-gray-800">데이터를 감시하고 변경될 때마다 제공된 콜백을 실행한다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$refs</h3>
+                <p class="text-gray-800">키로 요소 참조(x-ref를 사용하여 지정)</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$nextTick</h3>
+                <p class="text-gray-800">다음 "tick" (브라우저 페인트)이 실행될 때까지 기다렸다가 약간의 코드를 실행한다.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="relative mt-4">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+            <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center">
+            <span class="bg-white px-2 text-sm text-gray-500">2개의 메서드</span>
+        </div>
+    </div>
+
+    <div class="overflow-hidden rounded-md bg-white shadow">
+        <ul role="list" class="divide-y divide-gray-200">
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">$store</h3>
+                <p class="text-gray-800">Alpine.store(...) 을 이용해서 등록된 글로벌 스토어에 액세스합니다.</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">Alpine.data</h3>
+                <p class="text-gray-800">데이터 객체를 재사용하고 x-data를 사용하여 참조하기</p>
+            </li>
+            <li class="px-6 py-4">
+                <h3 class="text-xl font-bold">Alpine.store</h3>
+                <p class="text-gray-800">$store를 사용하여 어디서나 액세스 할 수 있는 글로벌 반응형 데이터를 선언한다.</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
