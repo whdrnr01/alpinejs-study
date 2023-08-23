@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Alpinejs Search Input</title>
+	<script src="//unpkg.com/alpinejs" defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="p-4">
+		<h1 class="text-3xl font-bold">Alpinejs Search</h1>
+		<div class="p-4" x-data="{
+			search: '',
+			items: ['foo', 'bar', 'baz'],
+			get filteredItems() {
+				return this.items.filter(
+					i => i.startsWith(this.search)
+				)
+			}
+		}">
+			<input type="text" placeholder="Search here..." x-model="search">
+			
+			<ul>
+				<template x-for="item in filteredItems" :key="item">
+					<li x-text='item'></li>
+				</template>
+			</ul>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>

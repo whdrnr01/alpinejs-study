@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alpinejs tabs with tailwindcss</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+</head>
+<body
+        class="p-10">
+    <h1 class="text-3xl font-bold">Tabs with Tailwindcss and Alpinejs</h1>
+    <div class="p-6" x-data="{
+        openTab: 1,
+        activeClasses: 'border-l border-t border-r rounded-t text-blue-700',
+        inactiveClasses: 'text-blue-500 hover:text-blue-800'
+        }">
+        <!-- Content goes here -->
+        <ul class="flex border-b">
+            <li class="-mb-px mr-1" @click="openTab = 1" :class="{ '-mb-px': openTab === 1 }">
+                <a :class="openTab === 1 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold" href="#">Tab1</a>
+            </li>
+            <li class="mr-1" @click="openTab = 2" :class="{ '-mb-px' : openTab === 2 }">
+                <a :class="openTab === 2 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold" href="#">Tab2</a>
+            </li>
+            <li class="mr-1" @click="openTab = 3" :class="{ '-mb-px' : openTab === 3 }">
+                <a :class="openTab === 3 ? activeClasses : inactiveClasses" class="bg-white inline-block py-2 px-4 font-semibold" href="#">Tab3</a>
+            </li>
+        </ul>
+
+        <div class="w-full">
+            <div x-show="openTab === 1">Tab #1</div>
+            <div x-show="openTab === 2">Tab #2</div>
+            <div x-show="openTab === 3">Tab #3</div>
+        </div>
+    </div>
+
+<h1 class="text-3xl font-bold">New Tab Sample</h1>
+<div x-data="{ openT: 1 }" class="mt-4">
+    <nav class="flex space-x-4" aria-label="Tabs">
+        <!-- Current: "bg-gray-100 text-gray-700", Default: "text-gray-500 hover:text-gray-700" -->
+        <a href="#" @click="openT = 1" :class="openT === 1 ? 'bg-gray-100 text-gray-700' : 'text-gray-500 hover:text-gray-700'" class="rounded-md px-3 py-2 text-sm font-medium">My Account</a>
+        <a href="#" @click="openT = 2" :class="openT === 2 ? 'bg-gray-100 text-gray-700' : 'text-gray-500 hover:text-gray-700'" class="rounded-md px-3 py-2 text-sm font-medium">Company</a>
+        <a href="#" @click="openT = 3" :class="openT === 3 ? 'bg-gray-100 text-gray-700' : 'text-gray-500 hover:text-gray-700'" class="rounded-md px-3 py-2 text-sm font-medium">Team Members</a>
+    </nav>
+
+    <div class="w-full">
+        <div id="tab1" x-show="openT === 1">Tab1</div>
+        <div id="tab2" x-show="openT === 2">Tab2</div>
+        <div id="tab3" x-show="openT === 3">Tab3</div>
+    </div>
+
+</div>
+
+</body>
+</html>
