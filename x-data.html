@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Alpinejs x-data</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+	<script>
+		document.addEventListener('alpine:init', () => {
+			Alpine.data('dropdown', () => ({
+				open: false,
+				toggle() {
+					this.open = ! this.open
+				}
+			}))
+			
+			Alpine.store('tabs', {
+				current: 'first',
+				items: ['first', 'second', 'third']
+			})
+		})
+	</script>
+</head>
+<body class="p-4">
+	<div class="container bg-gray-100 p-6">
+		<h1 class="text-3xl text-gray-900 font-extrabold py-4">x-data toggle button sample using multiple place</h1>
+		<div x-data="dropdown" class="bg-green-200 p-4">
+			<button class="bg-blue-500 hover:bg-blue-700 text-white rounded-lg px-4 py-2"  @click="toggle">Expand 1</button>
+			<p x-show="open" class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, esse, magni omnis dignissimos iste culpa, corporis error voluptates modi natus rem optio. Nulla, sunt illum odit officia aliquam itaque neque.</p>
+		</div>
+		<div x-data="dropdown" class="bg-green-200 p-4">
+			<button class="bg-blue-500 hover:bg-blue-700 text-white rounded-lg px-4 py-2"  @click="toggle">Expand 2</button>
+			<p x-show="open" class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, esse, magni omnis dignissimos iste culpa, corporis error voluptates modi natus rem optio. Nulla, sunt illum odit officia aliquam itaque neque.</p>
+		</div>
+		
+		<h1 class="text-3xl text-gray-900 font-extrabold py-4">x-store tabs using menu</h1>
+		<div x-data>
+			<ul>
+				<template x-for="tab in $store.tabs.items">
+					<li x-text="tab"></li>
+				</template>				
+			</ul>
+
+		</div>
+	</div>
+
+	<script src="//unpkg.com/alpinejs" defer></script>	
+</body>
+</html>
